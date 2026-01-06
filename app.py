@@ -57,7 +57,7 @@ def obtener_productos():
 @app.route('/')
 def index():
     # Enviamos la fecha para verificar cuándo se hizo el último despliegue automático
-    fecha_actual = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    fecha_actual = datetime.now().strftime("DEPLOY CI/CD %Y-%m-%d %H:%M:%S")
     lista_productos = obtener_productos()
     
     return render_template('index.html', productos=lista_productos, fecha=fecha_actual)
